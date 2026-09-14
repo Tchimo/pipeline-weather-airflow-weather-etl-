@@ -1,0 +1,24 @@
+{"timestamp":"2026-09-14T05:29:14.546805Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-09-14T05:29:14.575916Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dag_weather.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-09-14T05:29:14.746242Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/dag_weather.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-09-14T05:29:14.746621Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/dag_weather.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-09-14T05:29:14.795458Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.796180Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.796735Z","level":"info","event":"Current task name:transform","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.797422Z","level":"info","event":"Dag name:dag_weather","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.798787Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.799335Z","level":"info","event":" Iniciando transformações","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.798935Z","level":"info","event":"→ Criando DataFrame do arquivo JSON...","logger":"root","filename":"transform_data.py","lineno":43}
+{"timestamp":"2026-09-14T05:29:14.807301Z","level":"info","event":"\n✓ DataFrame criado com 1 linhas e 28 colunas","logger":"root","filename":"transform_data.py","lineno":53}
+{"timestamp":"2026-09-14T05:29:14.812270Z","level":"info","event":"\n✓ Coluna 'weather' normalizada - (1, 32)","logger":"root","filename":"transform_data.py","lineno":67}
+{"timestamp":"2026-09-14T05:29:14.813144Z","level":"info","event":"\n→ Removendo colunas: ['weather', 'weather_icon', 'sys.type']","logger":"root","filename":"transform_data.py","lineno":71}
+{"timestamp":"2026-09-14T05:29:14.821141Z","level":"info","event":"✓ Colunas removidas  ['weather', 'weather_icon', 'sys.type'] - (1, 29)","logger":"root","filename":"transform_data.py","lineno":73}
+{"timestamp":"2026-09-14T05:29:14.821784Z","level":"info","event":"\n→ Renomeando 26 colunas...","logger":"root","filename":"transform_data.py","lineno":77}
+{"timestamp":"2026-09-14T05:29:14.823049Z","level":"info","event":"✓ Colunas renomeadas","logger":"root","filename":"transform_data.py","lineno":79}
+{"timestamp":"2026-09-14T05:29:14.823282Z","level":"info","event":"\n→ Convertendo colunas para datetime: ['datetime', 'sunrise', 'sunset']","logger":"root","filename":"transform_data.py","lineno":83}
+{"timestamp":"2026-09-14T05:29:14.830105Z","level":"info","event":"✓ Colunas convertidas para datetime\n","logger":"root","filename":"transform_data.py","lineno":86}
+{"timestamp":"2026-09-14T05:29:14.830410Z","level":"info","event":"✓ Transformações concluídas\n","logger":"root","filename":"transform_data.py","lineno":96}
+{"timestamp":"2026-09-14T05:29:14.936945Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-09-14T05:29:14.994466Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.995450Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-09-14T05:29:14.996611Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): transform>","logger":"task.stdout"}
